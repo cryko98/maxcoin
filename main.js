@@ -10,7 +10,7 @@
       var value = btn.getAttribute('data-copy');
       var done = function () {
         var label = btn.textContent;
-        btn.textContent = 'Copied';
+        btn.textContent = 'copied';
         btn.classList.add('is-done');
         setTimeout(function () {
           btn.textContent = label;
@@ -112,7 +112,7 @@
       cols.push({
         y: Math.random() * h,
         speed: 0.22 + Math.random() * 0.55,
-        alpha: 0.05 + Math.random() * 0.16
+        alpha: 0.08 + Math.random() * 0.20
       });
     }
   }
@@ -133,7 +133,7 @@
       for (var j = 0; j < 5; j++) {
         var y = c.y - j * 15;
         if (y < -12 || y > h + 12) continue;
-        ctx.fillStyle = 'rgba(198,177,94,' + (c.alpha * (1 - j / 5)).toFixed(3) + ')';
+        ctx.fillStyle = 'rgba(59,102,255,' + (c.alpha * (1 - j / 5)).toFixed(3) + ')';
         ctx.fillText(HEX[(Math.random() * 16) | 0], x, y);
       }
 
@@ -141,7 +141,7 @@
       if (c.y > h + 60) {
         c.y = -Math.random() * 90;
         c.speed = 0.22 + Math.random() * 0.55;
-        c.alpha = 0.05 + Math.random() * 0.16;
+        c.alpha = 0.08 + Math.random() * 0.20;
       }
     }
   }

@@ -10,18 +10,24 @@ on 28 January 2014.
 | File | Purpose |
 | --- | --- |
 | `index.html` | The whole page |
-| `styles.css` | Styling — gold/near-black palette taken from the 2014 mark |
+| `styles.css` | Styling — electric blue on black, taken from the coin and the banner |
 | `main.js` | Copy-to-clipboard, mobile menu, scroll reveals, hero hash field |
-| `logo.jfif` | Logo, also used as favicon and OG image |
+| `newlogo.jpg` | The coin. Logo, favicon, nav and footer mark |
+| `banner.jpg` | The up only banner. Full-bleed strip under the hero, and the OG / Twitter card image |
+| `logo.jfif` | The flat 2014 mark. Kept for reference, not used by the page |
 
 No build step, no dependencies. Fonts load from Google Fonts.
+
+Both artworks are shot on pure black, so they are composited with `mix-blend-mode: screen`
+over the black page — that drops their backgrounds out completely and lets the coin's glow
+show through. If you ever swap in artwork on a different background, remove that property.
 
 ## Contract
 
 Base: `0xb20000000000000000000057b754cfd33e493f01`
 
-The address appears in `index.html` in five places (hero chip, hero buttons, onchain block,
-footer links, meta). Search and replace if it ever changes.
+The address appears in `index.html` in several places (hero chip, hero buttons, onchain block,
+footer links). Search and replace if it ever changes.
 
 ## Local preview
 
@@ -40,4 +46,4 @@ branch `main`, folder `/ (root)`.
 
 - Add the project's X and Telegram links — placeholders are marked with an HTML comment
   in the footer of `index.html`.
-- Optionally replace `logo.jfif` with a transparent PNG plus a real `favicon.ico`.
+- Optionally add a real `favicon.ico`; the page currently points browsers at `newlogo.jpg`.
