@@ -45,7 +45,9 @@ branch `main`, folder `/ (root)`.
 ## To do before launch
 
 - Add the project's Telegram link — the placeholder is marked with an HTML comment
-  in the footer of `index.html`. X is already wired to
-  [@maxcoinisbased](https://x.com/maxcoinisbased) in the nav, the footer and the
-  `twitter:site` meta tag.
+  in the footer of `index.html`. X is already wired up:
+  [@maxcoinisbased](https://x.com/maxcoinisbased) in the nav, the community band, the footer
+  and the `twitter:site` meta tag, and the
+  [X community](https://x.com/i/communities/1992156120572735753) in the community band
+  and the footer.
 - Optionally add a real `favicon.ico`; the page currently points browsers at `newlogo.jpg`.

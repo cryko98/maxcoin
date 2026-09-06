@@ -116,6 +116,7 @@ a{ color:inherit; }
 }
 .nav__links a{
   color:var(--grey); text-decoration:none;
+  white-space:nowrap;
   padding:4px 0; position:relative;
   transition:color .18s ease;
 }
@@ -596,6 +597,27 @@ a{ color:inherit; }
 }
 .steps p{ margin:0; color:var(--grey); font-size:15.5px; }
 
+/* ── community band ──────────────────────────────────────── */
+.join{
+  border-top:1px solid var(--line);
+  padding-block:clamp(48px,7vw,86px);
+}
+.join__grid{
+  display:flex; flex-wrap:wrap; align-items:center;
+  justify-content:space-between;
+  gap:clamp(24px,4vw,56px);
+}
+.join h2{
+  font-family:var(--disp); font-weight:800;
+  font-size:clamp(28px,4.2vw,46px);
+  letter-spacing:-.045em; line-height:1;
+  margin:0 0 12px;
+}
+.join p{ margin:0; color:var(--grey); max-width:46ch; }
+.join__btns{ display:flex; flex-wrap:wrap; gap:10px; }
+.btn--x{ gap:10px; }
+.btn--x svg{ width:13px; height:13px; fill:currentColor; flex:none; }
+
 /* ── footer ──────────────────────────────────────────────── */
 .foot{
   padding-block:clamp(48px,7vw,80px) 40px;
@@ -651,7 +673,8 @@ a{ color:inherit; }
   .cols{ columns:1; }
 }
 
-@media (max-width:800px){
+/* six nav items stop fitting well before the mobile breakpoint */
+@media (max-width:940px){
   .nav__links{
     position:absolute; top:100%; left:0; right:0;
     flex-direction:column; gap:0;
@@ -661,10 +684,13 @@ a{ color:inherit; }
     max-height:0; overflow:hidden;
     transition:max-height .3s ease;
   }
-  .nav__links.is-open{ max-height:340px; }
+  .nav__links.is-open{ max-height:400px; }
   .nav__links a{ padding:15px 0; border-bottom:1px solid var(--line); font-size:16px; }
   .nav__links a::after{ display:none; }
   .burger{ display:flex; }
+}
+
+@media (max-width:800px){
   .foot__grid{ grid-template-columns:1fr; align-items:start; }
   .foot__links{ justify-content:flex-start; }
   .banner img{ min-height:180px; object-fit:cover; }
