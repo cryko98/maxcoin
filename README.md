@@ -44,6 +44,8 @@ branch `main`, folder `/ (root)`.
 
 ## To do before launch
 
-- Add the project's X and Telegram links — placeholders are marked with an HTML comment
-  in the footer of `index.html`.
+- Add the project's Telegram link — the placeholder is marked with an HTML comment
+  in the footer of `index.html`. X is already wired to
+  [@maxcoinisbased](https://x.com/maxcoinisbased) in the nav, the footer and the
+  `twitter:site` meta tag.
 - Optionally add a real `favicon.ico`; the page currently points browsers at `newlogo.jpg`.
