@@ -412,6 +412,55 @@ a{ color:inherit; }
 .spec dd{ margin:0; color:var(--white); }
 .spec > div:last-child dd{ color:var(--grey); }
 
+/* ── proof: the builder's own thread ─────────────────────── */
+.proof{ margin:clamp(32px,5vw,56px) 0 0; }
+.proof__card{
+  display:block;
+  text-decoration:none;
+  border:1px solid var(--line-2);
+  border-left:4px solid var(--blue);
+  background:var(--black);
+  padding:clamp(24px,3.4vw,38px);
+  transition:border-color .22s ease, background .22s ease;
+}
+.proof__card:hover{ border-color:var(--line-2); border-left-color:var(--blue-hi); background:var(--black-3); }
+.proof__head{
+  display:flex; align-items:center; gap:12px;
+  margin-bottom:20px;
+}
+.proof__x{ width:16px; height:16px; fill:var(--white); flex:none; }
+.proof__who{
+  font-family:var(--disp); font-weight:700; font-size:16px;
+  letter-spacing:-.02em;
+}
+.proof__head time{
+  margin-left:auto;
+  font-family:var(--mono); font-size:11px;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--grey-2);
+}
+.proof blockquote{
+  margin:0 0 18px;
+  font-family:var(--disp); font-weight:700;
+  font-size:clamp(20px,2.8vw,29px);
+  line-height:1.22; letter-spacing:-.035em;
+  text-wrap:balance;
+}
+.proof__gloss{
+  margin:0 0 22px;
+  color:var(--grey);
+  font-size:16px;
+  max-width:78ch;
+}
+.proof__go{
+  font-family:var(--mono); font-size:11px;
+  letter-spacing:.12em; text-transform:uppercase;
+  color:var(--blue-hi);
+  display:inline-flex; align-items:center; gap:8px;
+}
+.proof__go::after{ content:"→"; transition:transform .22s ease; }
+.proof__card:hover .proof__go::after{ transform:translateX(5px); }
+
 /* ── quote ───────────────────────────────────────────────── */
 .quote{
   margin:0 0 clamp(32px,5vw,52px);
