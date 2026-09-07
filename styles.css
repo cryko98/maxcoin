@@ -280,6 +280,23 @@ a{ color:inherit; }
 .ca__copy:hover{ background:var(--blue-hi); }
 .ca__copy.is-done{ background:var(--white); color:var(--blue); }
 
+/* pre-launch: no address yet. The blinking block matches the hero title's cursor. */
+.ca--pending .ca__value{
+  display:flex; align-items:center; gap:12px;
+  font-family:var(--disp); font-weight:700; font-size:17px;
+  letter-spacing:-.02em;
+  color:var(--blue-hi);
+}
+.ca--pending .ca__value::before{
+  content:""; flex:none;
+  width:9px; height:1em;
+  background:var(--blue);
+  animation:blink 2.6s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce){
+  .ca--pending .ca__value::before{ animation:none; }
+}
+
 .cta{ display:flex; flex-wrap:wrap; gap:10px; }
 
 /* the coin */
@@ -554,6 +571,30 @@ a{ color:inherit; }
   line-height:1.7;
   margin-bottom:22px;
 }
+.onchain__ca--pending code{
+  display:flex; align-items:center; gap:14px;
+  font-family:var(--disp); font-weight:700;
+  font-size:clamp(21px,2.6vw,28px);
+  letter-spacing:-.03em;
+  color:var(--blue-hi);
+  margin-bottom:0;
+}
+.onchain__ca--pending code::before{
+  content:""; flex:none;
+  width:11px; height:1em;
+  background:var(--blue);
+  animation:blink 2.6s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce){
+  .onchain__ca--pending code::before{ animation:none; }
+}
+.onchain__warn{
+  margin:22px 0 0;
+  padding-top:20px;
+  border-top:1px solid var(--line-2);
+  font-size:14.5px; line-height:1.65;
+  color:var(--grey-2);
+}
 .onchain__links{ list-style:none; margin:0; padding:0; }
 .onchain__links li{ border-top:1px solid var(--line); }
 .onchain__links li:last-child{ border-bottom:1px solid var(--line); }
@@ -697,7 +738,7 @@ a{ color:inherit; }
 }
 
 @media (max-width:430px){
-  /* the nav gets crowded — the hero and footer both carry the chart link */
+  /* the nav gets crowded — the menu already links to the contract section */
   .nav__right .btn--sm{ display:none; }
 }
 

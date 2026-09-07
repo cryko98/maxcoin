@@ -58,7 +58,8 @@
     <a class="icon" href="https://x.com/maxcoinisbased" target="_blank" rel="noopener" aria-label="Maxcoin on X">
       <svg viewBox="0 0 1200 1227" aria-hidden="true" focusable="false"><path d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"/></svg>
     </a>
-    <a class="btn btn--sm btn--blue" href="https://dexscreener.com/base/0xb20000000000000000000057b754cfd33e493f01" target="_blank" rel="noopener">chart</a>
+    <!-- at launch: this becomes the chart link -->
+    <a class="btn btn--sm btn--blue" href="#onchain">contract</a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
 </header>
@@ -81,16 +82,24 @@
           This is that name, back onchain.
         </p>
 
-        <div class="ca">
+        <!-- at launch: put the contract address in the code element below, restore the
+             copy button (class ca__copy with a data-copy attribute holding the address),
+             drop the ca--pending class, and swap these two buttons back to
+             buy on base / basescan / dexscreener -->
+        <div class="ca ca--pending">
           <span class="ca__label">contract · base</span>
-          <code class="ca__value">0xb20000000000000000000057b754cfd33e493f01</code>
-          <button class="ca__copy" data-copy="0xb20000000000000000000057b754cfd33e493f01">copy</button>
+          <code class="ca__value">coming soon</code>
         </div>
 
         <div class="cta">
-          <a class="btn btn--blue" href="https://app.uniswap.org/swap?outputCurrency=0xb20000000000000000000057b754cfd33e493f01&amp;chain=base" target="_blank" rel="noopener">buy on base</a>
-          <a class="btn" href="https://basescan.org/token/0xb20000000000000000000057b754cfd33e493f01" target="_blank" rel="noopener">basescan</a>
-          <a class="btn" href="https://dexscreener.com/base/0xb20000000000000000000057b754cfd33e493f01" target="_blank" rel="noopener">dexscreener</a>
+          <a class="btn btn--blue btn--x" href="https://x.com/maxcoinisbased" target="_blank" rel="noopener">
+            <svg viewBox="0 0 1200 1227" aria-hidden="true" focusable="false"><path d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"/></svg>
+            announcement on x
+          </a>
+          <a class="btn btn--x" href="https://x.com/i/communities/1992156120572735753" target="_blank" rel="noopener">
+            <svg viewBox="0 0 1200 1227" aria-hidden="true" focusable="false"><path d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"/></svg>
+            x community
+          </a>
         </div>
       </div>
 
@@ -277,19 +286,21 @@
       <header class="sect__head reveal">
         <p class="sect__num">05</p>
         <h2 class="sect__title">onchain</h2>
-        <p class="sect__note">One address. Verify it somewhere that is not this page.</p>
+        <p class="sect__note">One address, when there is one. Until then, there is nothing to verify.</p>
       </header>
 
       <div class="onchain reveal">
-        <div class="onchain__ca">
+        <!-- at launch: replace the coming-soon code element with the address, add the copy
+             button back, and put the basescan / dexscreener / uniswap rows in the list -->
+        <div class="onchain__ca onchain__ca--pending">
           <p class="ca__label">contract address · base</p>
-          <code>0xb20000000000000000000057b754cfd33e493f01</code>
-          <button class="ca__copy" data-copy="0xb20000000000000000000057b754cfd33e493f01">copy</button>
+          <code>coming soon</code>
+          <p class="onchain__warn">The address gets published here and announced on the account.
+          Anything circulating as $MAXCOIN before that is not $MAXCOIN.</p>
         </div>
         <ul class="onchain__links">
-          <li><a href="https://basescan.org/token/0xb20000000000000000000057b754cfd33e493f01" target="_blank" rel="noopener">basescan <span>Token page, holders, transfers</span></a></li>
-          <li><a href="https://dexscreener.com/base/0xb20000000000000000000057b754cfd33e493f01" target="_blank" rel="noopener">dexscreener <span>Price, liquidity, pairs</span></a></li>
-          <li><a href="https://app.uniswap.org/swap?outputCurrency=0xb20000000000000000000057b754cfd33e493f01&amp;chain=base" target="_blank" rel="noopener">uniswap <span>Swap on Base</span></a></li>
+          <li><a href="https://x.com/maxcoinisbased" target="_blank" rel="noopener">@maxcoinisbased <span>Where the contract gets announced</span></a></li>
+          <li><a href="https://x.com/i/communities/1992156120572735753" target="_blank" rel="noopener">x community <span>Everything else, in the meantime</span></a></li>
         </ul>
       </div>
     </div>
@@ -307,7 +318,7 @@
       <ol class="steps">
         <li class="reveal"><span>01</span><h3>get a wallet</h3><p>Any EVM wallet does the job. Coinbase Wallet, Rabby, MetaMask.</p></li>
         <li class="reveal"><span>02</span><h3>fund it on base</h3><p>Bridge or buy ETH on Base. Leave a little spare for gas.</p></li>
-        <li class="reveal"><span>03</span><h3>paste the contract</h3><p>Use the address above. Compare it character by character against Basescan.</p></li>
+        <li class="reveal"><span>03</span><h3>wait for the contract</h3><p>It lands on this page and on the account. Take it from nowhere else, and check it character by character.</p></li>
         <li class="reveal"><span>04</span><h3>swap</h3><p>Set sane slippage, confirm, done. Nobody here is going to tell you the number.</p></li>
       </ol>
     </div>
@@ -349,8 +360,7 @@
     </div>
 
     <nav class="foot__links" aria-label="Footer">
-      <a href="https://basescan.org/token/0xb20000000000000000000057b754cfd33e493f01" target="_blank" rel="noopener">basescan</a>
-      <a href="https://dexscreener.com/base/0xb20000000000000000000057b754cfd33e493f01" target="_blank" rel="noopener">dexscreener</a>
+      <!-- at launch: basescan and dexscreener links go back in here -->
       <a href="https://bitcointalk.org/index.php?topic=438150.0" target="_blank" rel="noopener">bitcointalk</a>
       <a href="https://www.reddit.com/r/maxcoinproject/" target="_blank" rel="noopener">reddit</a>
       <a href="https://x.com/maxcoinisbased" target="_blank" rel="noopener">@maxcoinisbased</a>

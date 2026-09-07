@@ -24,10 +24,21 @@ show through. If you ever swap in artwork on a different background, remove that
 
 ## Contract
 
-Base: `0xb20000000000000000000057b754cfd33e493f01`
+Pre-launch: the page carries no contract address at all. Both CA boxes read `coming soon`,
+and the buy / chart / explorer links are replaced by the X account and the X community.
 
-The address appears in `index.html` in several places (hero chip, hero buttons, onchain block,
-footer links). Search and replace if it ever changes.
+At launch, search `index.html` for `at launch:` — five HTML comments mark every spot that
+needs the address:
+
+1. hero CA chip — put the address in the `code` element, drop the `ca--pending` class,
+   add the copy button back (`<button class="ca__copy" data-copy="ADDRESS">copy</button>`)
+2. hero buttons — swap the two X buttons for buy on base / basescan / dexscreener
+3. nav button — point it at the chart instead of `#onchain`
+4. onchain block — same treatment as the hero chip, then put the explorer rows back
+   in `.onchain__links`
+5. footer links — restore basescan and dexscreener
+
+`main.js` needs no change; the copy handler binds to any `[data-copy]` element.
 
 ## Local preview
 
